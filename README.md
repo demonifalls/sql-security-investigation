@@ -80,3 +80,8 @@ SELECT *
 FROM employees
 WHERE department <> 'Information Technology';
 ```
+## Security Relevance
+
+Being able to quickly filter a large database can help during a security investigation by allowing me to retrieve relevant information in a timely manner. This can help identify activity that requires further investigation and provide the information needed to respond to potential security threats.
+
+Instead of manually reviewing thousands of records, SQL filtering can retrieve the relevant data within seconds. This allows an analyst to focus on the information related to the investigation and respond more efficiently.
