@@ -85,3 +85,11 @@ WHERE department <> 'Information Technology';
 Being able to quickly filter a large database can help during a security investigation by allowing me to retrieve relevant information in a timely manner. This can help identify activity that requires further investigation and provide the information needed to respond to potential security threats.
 
 Instead of manually reviewing thousands of records, SQL filtering can retrieve the relevant data within seconds. This allows an analyst to focus on the information related to the investigation and respond more efficiently.
+## Project Files
+
+- `README.md` — Documentation of the investigation, SQL techniques used, and security relevance.
+- `queries.sql` — SQL queries used to investigate login activity and filter employee data.
+
+## Disclaimer
+
+This project was completed as an educational cybersecurity exercise. The scenario and data are simulated and do not represent a real security incident.
