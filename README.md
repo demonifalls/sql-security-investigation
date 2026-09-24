@@ -16,3 +16,67 @@ In this scenario, there were failed login attempts after business hours. I used 
 - Used `NOT LIKE` and the `%` wildcard to filter data based on patterns.
 - Used the `<>` operator to exclude records that matched a specific value.
 - Applied SQL filtering techniques to analyze login activity and employee data during a security investigation.
+## SQL Investigation
+
+### 1. Failed Login Attempts After Business Hours
+
+I used this query to retrieve all columns for login attempts that occurred after 18:00 and were unsuccessful. This helped narrow the results to failed login activity that occurred after business hours and could require further investigation.
+
+```sql
+SELECT *
+FROM log_in_attempts
+WHERE login_time > '18:00'
+AND success = FALSE;
+```
+
+### 2. Login Activity on Specific Dates
+
+I used this query to retrieve login attempt records from the `log_in_attempts` table that occurred on either May 8, 2022, or May 9, 2022. This allowed me to focus on login activity from the specific dates relevant to the investigation.
+
+```sql
+SELECT *
+FROM log_in_attempts
+WHERE login_date = '2022-05-08'
+OR login_date = '2022-05-09';
+```
+
+### 3. Login Attempts Outside Mexico
+
+I used this query to retrieve login attempt records from the `log_in_attempts` table where the location did not begin with `MEX`. This allowed me to exclude login activity from Mexico and focus on activity from other locations.
+
+```sql
+SELECT *
+FROM log_in_attempts
+WHERE location NOT LIKE 'MEX%';
+```
+
+### 4. Marketing Department Employees
+
+I used this query to retrieve employee records from the `employees` table where the department was Marketing. This allowed me to narrow the results to employees in a specific department.
+
+```sql
+SELECT *
+FROM employees
+WHERE department = 'Marketing';
+```
+
+### 5. Finance or Sales Department Employees
+
+I used this query to retrieve employee records from the `employees` table where the department was either Finance or Sales. I used the `OR` operator because an employee only needed to belong to one of the two departments to be included in the results.
+
+```sql
+SELECT *
+FROM employees
+WHERE department = 'Finance'
+OR department = 'Sales';
+```
+
+### 6. Employees Outside Information Technology
+
+I used this query to retrieve employee records from the `employees` table where the department was not Information Technology. The `<>` operator excluded employees who belonged to the Information Technology department.
+
+```sql
+SELECT *
+FROM employees
+WHERE department <> 'Information Technology';
+```
