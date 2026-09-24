@@ -16,6 +16,7 @@ In this scenario, there were failed login attempts after business hours. I used 
 - Used `NOT LIKE` and the `%` wildcard to filter data based on patterns.
 - Used the `<>` operator to exclude records that matched a specific value.
 - Applied SQL filtering techniques to analyze login activity and employee data during a security investigation.
+
 ## SQL Investigation
 
 ### 1. Failed Login Attempts After Business Hours
@@ -80,11 +81,13 @@ SELECT *
 FROM employees
 WHERE department <> 'Information Technology';
 ```
+
 ## Security Relevance
 
 Being able to quickly filter a large database can help during a security investigation by allowing me to retrieve relevant information in a timely manner. This can help identify activity that requires further investigation and provide the information needed to respond to potential security threats.
 
 Instead of manually reviewing thousands of records, SQL filtering can retrieve the relevant data within seconds. This allows an analyst to focus on the information related to the investigation and respond more efficiently.
+
 ## Project Files
 
 - `README.md` — Documentation of the investigation, SQL techniques used, and security relevance.
